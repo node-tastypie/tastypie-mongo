@@ -1,0 +1,42 @@
+{
+  "name": "tastypie-mongo",
+  "version": "0.1.0",
+  "description": "Tastypie resource and fields for mongodb backends",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./scripts/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/esatterwhite/tastypie-mongo.git"
+  },
+  "keywords": [
+    "tastypie",
+    "hapi",
+    "hapi.js",
+    "mongodb",
+    "mongoose",
+    "rest",
+    "api",
+    "resource"
+  ],
+  "author": "Eric Satterwhite <esatterwhite@wi.rr.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/esatterwhite/tastypie-mongo/issues"
+  },
+  "homepage": "https://github.com/esatterwhite/tastypie-mongo",
+  "dependencies": {
+    "mout": "^0.11.0",
+    "qs": "^4.0.0"
+  },
+  "peerDependencies": {
+    "tastypie": "^0.4.0"
+  },
+  "devDependencies": {
+    "debug": "^2.2.0",
+    "hapi": "^8.8.0",
+    "joi": "^6.5.0",
+    "tastypie": "^0.4.0"
+  }
+}
