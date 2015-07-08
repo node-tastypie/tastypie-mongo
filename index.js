@@ -1,1 +1,1 @@
-module.exports = requires("./lib/resource");
+module.exports = require("./lib/resource");
