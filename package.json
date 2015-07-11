@@ -37,6 +37,10 @@
   "devDependencies": {
     "debug": "^2.2.0",
     "hapi": "^8.8.0",
-    "joi": "^6.5.0"
+    "joi": "^6.5.0",
+    "mocha": "^2.2.5",
+    "mongoose": "^4.0.7",
+    "should": "^7.0.2",
+    "tastypie": "^0.4.3"
   }
 }
