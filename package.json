@@ -1,6 +1,6 @@
 {
   "name": "tastypie-mongoose",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "description": "Tastypie resource and fields for mongodb backends",
   "main": "index.js",
   "scripts": {
