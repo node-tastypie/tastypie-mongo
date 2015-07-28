@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/esatterwhite/tastypie-mongo",
   "dependencies": {
+    "async": "^1.4.0",
     "boom": "^2.8.0",
     "mout": "^0.11.0",
     "qs": "^4.0.0"
