@@ -29,7 +29,7 @@ var Test = connection.model('Test', Schema)
 ##### Define A Resource
 ```js
 var tastypie = require("tastypie");
-var MongoseResource = tastypie.Resource.Mongoose;
+var MongoseResource = require('tastypie-mongoose');
 
 // Default Query
 var queryset = Test.find().lean().toConstructor()
