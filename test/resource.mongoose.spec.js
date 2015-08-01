@@ -71,7 +71,7 @@ describe('MongoResource', function( ){
 				options:{
 
 					queryset: queryset
-					,filtering:{
+					,filtering: {
 						name:1,
 						age:['lt', 'lte']
 					}
