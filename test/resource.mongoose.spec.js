@@ -1,16 +1,18 @@
 /*jshint laxcomma: true, smarttabs: true, node: true, mocha: true*/
-var should        = require('should')
+var tastypie      = require('tastypie')
+  , should        = require('should')
   , assert        = require('assert')
-  , server        = require('./server')
-  , Api           = require('tastypie/lib/api')
-  , Resource      = require( 'tastypie/lib/resource' )
-  , MongoResource = require( '../lib/resource/index' )
   , mongoose      = require( 'mongoose' )
   , fs            = require('fs')
   , path          = require('path')
-  , fields        = require('tastypie/lib/fields')
-  , http          = require('tastypie/lib/http')
+  , server        = require('./server')
+  , MongoResource = require( '../lib/resource/index' )
+  , fields        = tastypie.fields
+  , http          = tastypie.http
+  , Api           = tastypie.Api
+  , Resource      = tastypie.Resource
   ;
+
 
 var connection = mongoose.createConnection('mongodb://127.0.0.1:27017/test')
 var  Schema = new mongoose.Schema({
@@ -72,9 +74,12 @@ describe('MongoResource', function( ){
 
 					queryset: queryset
 					,filtering: {
-						name:1,
-						age:['lt', 'lte']
+						name:tastypie.constants.ALL,
+						age:['lt', 'lte' ]
 					}
+				}
+				,constructor:function( options ){
+					this.parent('constructor', options)
 				}
 				,fields:{
 					name:{type:'char', attribute:'name.first'},
@@ -88,6 +93,7 @@ describe('MongoResource', function( ){
 		})
 
 		it('should respect the limit param', function( done ){
+			debugger;
 			server.inject({
 				url:'/api/mongo/test?limit=10'
 				,method:'get'

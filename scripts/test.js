@@ -28,6 +28,7 @@ if( production ){
 mocha = child_process.spawn("mocha", [
 	"--growl"
 	, "--recursive"
+	, "--debug-brk"
 	, util.format("--reporter=%s", production ? 'xunit':'spec')
 	, 'test/*.spec.js'
 ]);

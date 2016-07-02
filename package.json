@@ -27,21 +27,21 @@
   },
   "homepage": "https://github.com/esatterwhite/tastypie-mongo",
   "dependencies": {
-    "async": "^1.4.0",
-    "boom": "^2.8.0",
-    "mout": "^0.11.0",
-    "qs": "^4.0.0"
+    "async": "^2.0.0-rc.6",
+    "boom": "^3.2.2",
+    "debug": "^2.2.0",
+    "mout": "^1.0.0",
+    "qs": "^6.2.0"
   },
   "peerDependencies": {
-    "tastypie": "^1.0.0"
+    "tastypie": "^3.0.0"
   },
   "devDependencies": {
-    "debug": "^2.2.0",
-    "hapi": "^8.8.0",
-    "joi": "^6.5.0",
+    "hapi": "^13.0.0",
+    "joi": "^8.4.2",
     "mocha": "^2.2.5",
     "mongoose": "^4.0.7",
-    "should": "^7.0.2",
-    "tastypie": "^1.0.0"
+    "should": "^9.0.2",
+    "tastypie": "^3.0.0"
   }
 }
