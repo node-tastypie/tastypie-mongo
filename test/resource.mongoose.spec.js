@@ -62,7 +62,6 @@ describe('MongoResource', function( ){
 		Model.remove( done )
 	});
 
-
 	describe('filtering', function( ){
 
 		var queryset, Mongo;
@@ -93,7 +92,6 @@ describe('MongoResource', function( ){
 		})
 
 		it('should respect the limit param', function( done ){
-			debugger;
 			server.inject({
 				url:'/api/mongo/test?limit=10'
 				,method:'get'
