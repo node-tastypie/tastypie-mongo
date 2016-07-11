@@ -3,9 +3,9 @@ var tastypie      = require('tastypie')
   , should        = require('should')
   , assert        = require('assert')
   , mongoose      = require( 'mongoose' )
+  , hapi          = require('hapi')
   , fs            = require('fs')
   , path          = require('path')
-  , server        = require('./server')
   , MongoResource = require( '../lib/resource/index' )
   , fields        = tastypie.fields
   , http          = tastypie.http
@@ -48,9 +48,12 @@ var  Schema = new mongoose.Schema({
 
 var Model = connection.model("Test", Schema )
 describe('MongoResource', function( ){
-	var mongo = new Api('api/mongo')
+	var mongo = new Api('api/mongo');
+	var server;
 	before(function( done ){
 
+		server = new hapi.Server();
+		server.connection({host:'localhost'})
 		Model.create( require('./data/test.json'), function( err, records){
 			server.register([mongo], function(){
 				server.start( done )
